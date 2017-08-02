@@ -1,0 +1,27 @@
+<ion-view view-title="Novo Pokemon">
+    <ion-content class="padding pagina-cadastro">
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="Nome" ng-model="dados.nome">
+            </label>
+            <label class="item item-input">
+                <input type="text" placeholder="HP" ng-model="dados.hp">
+            </label>
+
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Raça
+                </div>
+                <select ng-model="dados._id_raca">
+                    <option ng-repeat="raca in racas" value="{{raca._id}}">
+                        {{raca.nome}}
+                    </option>
+                </select>
+            </label>
+        </div>
+
+        <button class="button button-positive button-block" ng-click="salvar()">
+            Salvar
+        </button>
+    </ion-content>
+</ion-view>

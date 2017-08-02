@@ -1,0 +1,11 @@
+<ion-view view-title="Dashboard">
+    <ion-content>
+
+        <div map-lazy-load="https://maps.google.com/maps/api/js">
+            <ng-map center="-23.5977319, -46.6843749" zoom="15">
+                <marker ng-repeat="umPokemon in pokemons" position="{{umPokemon.coordenadas}}" icon="{{umPokemon.icone}}"></marker>
+            </ng-map>
+        </div>
+
+    </ion-content>
+</ion-view>

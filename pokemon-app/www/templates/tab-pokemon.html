@@ -1,0 +1,21 @@
+<ion-view view-title="Pokémons">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="pokemon in pokemons" type="item-text-wrap" href="#/tab/detalhe-pokemon/{{pokemon.id}}">
+        <img ng-src="{{pokemon.raca.imagem}}">
+        <h2>{{pokemon.nome}}</h2>
+        <p>{{pokemon.raca.tipo}}</p>
+        <p>HP: {{pokemon.hp}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+  <button type="button" class="button button-positive botao-flutuante" ui-sref="tab.cadastro-pokemon">
+      +
+  </button>
+</ion-view>
